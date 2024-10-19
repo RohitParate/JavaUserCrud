@@ -23,7 +23,7 @@ public class CompanyService {
         boolean companyExist = companyRepository.existsByCompanyCode(company.getCompanyCode());
 
         if(companyExist){
-            throw new ConflictException("CompanyAlready exists.");
+            throw new ConflictException("Company Already exists.");
         }
 
         //create

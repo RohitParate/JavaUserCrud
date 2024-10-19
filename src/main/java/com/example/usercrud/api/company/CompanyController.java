@@ -34,8 +34,8 @@ public class CompanyController {
 
     @PostMapping
     public ResponseEntity<CustomResponse> createCompany(@RequestBody CreateCompanyDto companyDto) throws Exception{
-        var newUser= companyService.save(companyDto);
-        CustomResponse response = new CustomResponse(true, "company created successfully", HttpStatus.CREATED.value(), newUser);
+        var newCompany= companyService.save(companyDto);
+        CustomResponse response = new CustomResponse(true, "company created successfully", HttpStatus.CREATED.value(), newCompany);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
 
     }
